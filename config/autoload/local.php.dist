@@ -12,4 +12,10 @@
  */
 
 return array(
+	'db' => array(
+        'dsn'            => 'mysql:dbname=cms-ir;hostname=localhost',
+        'database' => 'cms-ir',
+        'username' => 'root',
+        'password' => '',
+    ),
 );

@@ -107,12 +107,5 @@
               passthru="true"
                 />
     </target>
-
-    <target name="app:fixture:load">
-        <exec command="php public/index.php fixtures load"
-              checkreturn="true"
-              passthru="true"
-                />
-    </target>
-
+    
 </project>

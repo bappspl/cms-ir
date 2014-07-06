@@ -2,7 +2,7 @@
 
 use Phinx\Migration\AbstractMigration;
 
-class CmsTest extends AbstractMigration
+class CmsCreateTest extends AbstractMigration
 {
     /**
      * Change Method.
