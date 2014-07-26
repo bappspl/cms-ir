@@ -1,7 +1,7 @@
 <?php
 
 use Phinx\Migration\AbstractMigration;
-
+use Phinx\Db\Adapter\MysqlAdapter;
 class CmsCreateTest extends AbstractMigration
 {
     /**
@@ -20,30 +20,41 @@ class CmsCreateTest extends AbstractMigration
     public function up()
     {
         $this->table('cms_test', array())
-            ->addColumn('name', 'string')
-            ->addColumn('surname', 'integer')
-            ->save();
-        $this->insertValues('cms_test');
+             ->addColumn('name', 'string')
+             ->addColumn('surname', 'integer')
+             ->save();
+        $this->insertValues('cms_test', array('name' => 'string', 'surname' => 'integer'));
     }
 
+    public function insertValues($tableName, $tableColumns)
+    {
+        $path = fopen ('./data/fixtures/'.$tableName.'.csv',"r");
+        while (($data = fgetcsv($path, 1000, ";")) !== FALSE)  {
+            $num = count($data);
+            //print($num);
+            $value = '';
+            $i = 0;
+            foreach ($tableColumns as $kCol => $vCol) {
+                switch ($vCol) {
+                    case 'text':
+                        $value = $value . $kCol.' = "'.$data[$i]. '", ';
+                    break;
+                    case 'string':
+                        $value = $value . $kCol.' = "'.$data[$i]. '", ';
+                    break;
+                    case 'integer':
+                        $value = $value . $kCol.' = '.$data[$i] . ', ';
+                    break;
+                }
+                $i++;
+            }
+            $realValue = substr($value, 0, -2);
+            $this->adapter->execute('insert into '.$tableName.' set '.$realValue);
+        }
+        fclose ($path);
+    }
     public function down()
     {
         $this->dropTable('cms_test');
-
-    }
-
-    public function insertValues($arrayData)
-    {
-        $con=mysqli_connect("localhost","root","","cms-ir");
-        $baza_host=("localhost"); 
-        $baza_login=("root"); 
-        $baza_haslo=(""); 
-        $baza_nazwa=("cms-ir");
-    
-
-        $polaczenie = mysql_connect($baza_host, $baza_login, $baza_haslo);
-        $db = mysql_select_db($baza_nazwa);
-
-        mysql_query("insert into cms_test set name='aaa', surname=12");       
     }
 }
