@@ -8,21 +8,8 @@
     ],
     "repositories": [
         {
-            "type": "package",
-            "package": {
-                "name": "web-ir/cms-ir",
-                "version": "dev-master",
-                "source": {
-                    "url": "https://github.com/web-ir/IRcms.git",
-                    "type": "git",
-                    "reference": "master"
-                },
-                "autoload": {
-                    "psr-0" : {
-                        "web-ir\\cms-ir" : "src"
-                    }
-                }
-            }
+            "type": "vcs",
+            "url": "https://github.com/web-ir/IRcms"
         }
     ],
     "homepage": "http://framework.zend.com/",
