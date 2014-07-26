@@ -9,7 +9,7 @@
     "repositories": [
         {
             "type": "composer",
-            "url":  "https://github.com/web-ir/IRcms"
+            "url":  "https://github.com/web-ir/IRcms/tree/master"
         }
     ],
     "homepage": "http://framework.zend.com/",
