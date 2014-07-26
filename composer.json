@@ -13,7 +13,7 @@
                 "name": "web-ir/cms-ir",
                 "version": "dev-master",
                 "source": {
-                    "url": "git://github.com/web-ir/IRcms.git",
+                    "url": "https://github.com/web-ir/IRcms.git",
                     "type": "git",
                     "reference": "master"
                 },
