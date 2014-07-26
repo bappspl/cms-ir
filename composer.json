@@ -9,7 +9,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url":  "git://github.com/web-ir/IRcms/tree/master"
+            "url":  "https://github.com/web-ir/IRcms/tree/master"
         }
     ],
     "homepage": "http://framework.zend.com/",
