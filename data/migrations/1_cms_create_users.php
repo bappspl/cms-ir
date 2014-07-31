@@ -1,29 +1,32 @@
 <?php
-
 use Phinx\Migration\AbstractMigration;
 use Phinx\Db\Adapter\MysqlAdapter;
-class CmsCreateTest extends AbstractMigration
+
+class CmsCreateUsers extends AbstractMigration
 {
-    /**
-     * Change Method.
-     *
-     * More information on this method is available here:
-     * http://docs.phinx.org/en/latest/migrations.html#the-change-method
-     *
-     * Uncomment this method if you would like to use it.
-     *
-    public function change()
-    {
-    }
-    */
 
     public function up()
     {
-        $this->table('cms_test', array())
+        $this->table('cms_users', array())
              ->addColumn('name', 'string')
-             ->addColumn('surname', 'integer')
+             ->addColumn('surname', 'string')
+             ->addColumn('password', 'string')
+             ->addColumn('email', 'string')
+             ->addColumn('email_confirmed', 'integer', array('limit' => 1))
+             ->addColumn('role', 'integer' , array('limit' => 1))
+             ->addColumn('active', 'integer' , array('limit' => 1))
              ->save();
-        $this->insertValues('cms_test', array('name' => 'string', 'surname' => 'integer'));
+
+        $this->insertValues('cms_users', array(
+                'name' => 'string',
+                'surname' => 'string',
+                'password' => 'string',
+                'email' => 'string',
+                'email_confirmed' => 'integer',
+                'role' => 'integer',
+                'active' => 'integer'
+            )
+        );
     }
 
     public function insertValues($tableName, $tableColumns)
@@ -55,6 +58,6 @@ class CmsCreateTest extends AbstractMigration
     }
     public function down()
     {
-        $this->dropTable('cms_test');
+        $this->dropTable('cms_users');
     }
 }
