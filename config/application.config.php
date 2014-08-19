@@ -3,6 +3,8 @@ return array(
     'modules' => array(
         'Application',
 
+        'AssetManager',
+
         'CmsIr\Authentication'
     ),
     'module_listener_options' => array(
