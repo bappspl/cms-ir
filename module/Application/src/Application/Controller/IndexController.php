@@ -12,10 +12,22 @@ namespace Application\Controller;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 
+
+use Zend\Authentication\AuthenticationService;
+use Zend\Authentication\Result;
+use Zend\Authentication\Storage\Session as SessionStorage;
+use Zend\Db\Adapter\Adapter as DbAdapter;
+use Zend\Authentication\Adapter\DbTable as AuthAdapter;
+
 class IndexController extends AbstractActionController
 {
     public function indexAction()
     {
+        $this->layout('layout/application');
+        $auth = new AuthenticationService();
+        if ($auth->hasIdentity()) {
+            $loggedUser = $auth->getIdentity();
+        }
         return new ViewModel();
     }
 }

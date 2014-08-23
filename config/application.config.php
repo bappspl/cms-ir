@@ -5,7 +5,9 @@ return array(
 
         'AssetManager',
 
-        'CmsIr\Authentication'
+        'CmsIr\Authentication',
+        'CmsIr\Authorize',
+        'CmsIr\Dashboard'
     ),
     'module_listener_options' => array(
         'module_paths' => array(
