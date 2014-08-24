@@ -11,6 +11,7 @@ class CmsCreateUsers extends AbstractMigration
              ->addColumn('name', 'string')
              ->addColumn('surname', 'string')
              ->addColumn('password', 'string')
+             ->addColumn('password_salt', 'string')
              ->addColumn('email', 'string')
              ->addColumn('email_confirmed', 'integer', array('limit' => 1))
              ->addColumn('role', 'integer' , array('limit' => 1))
@@ -21,6 +22,7 @@ class CmsCreateUsers extends AbstractMigration
                 'name' => 'string',
                 'surname' => 'string',
                 'password' => 'string',
+                'password_salt' => 'string',
                 'email' => 'string',
                 'email_confirmed' => 'integer',
                 'role' => 'integer',
