@@ -36,7 +36,7 @@ class CmsCreateUsers extends AbstractMigration
         $path = fopen ('./data/fixtures/'.$tableName.'.csv',"r");
         while (($data = fgetcsv($path, 1000, ";")) !== FALSE)  {
             $num = count($data);
-            //print($num);
+            print($num);
             $value = '';
             $i = 0;
             foreach ($tableColumns as $kCol => $vCol) {
