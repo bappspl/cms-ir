@@ -16,6 +16,8 @@ class CmsCreateUsers extends AbstractMigration
              ->addColumn('email_confirmed', 'integer', array('limit' => 1))
              ->addColumn('role', 'integer' , array('limit' => 1))
              ->addColumn('active', 'integer' , array('limit' => 1))
+             ->addColumn('registration_date', 'datetime')
+             ->addColumn('registration_token', 'string')
              ->save();
 
         $this->insertValues('cms_users', array(

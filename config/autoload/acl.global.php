@@ -18,7 +18,7 @@ return array(
 					'all'	=> 'guest',
  				),
                 'CmsIr\Dashboard\Controller\Index' => array(
-                    'all'	=> 'superadmin',
+                    'all'	=> 'user',
                 ),
             )
         )
