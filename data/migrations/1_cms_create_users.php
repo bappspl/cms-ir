@@ -28,7 +28,9 @@ class CmsCreateUsers extends AbstractMigration
                 'email' => 'string',
                 'email_confirmed' => 'integer',
                 'role' => 'integer',
-                'active' => 'integer'
+                'active' => 'integer',
+                'registration_date' => 'string',
+                'registration_token' => 'string'
             )
         );
     }
@@ -56,6 +58,7 @@ class CmsCreateUsers extends AbstractMigration
                 $i++;
             }
             $realValue = substr($value, 0, -2);
+            //var_dump($realValue);
             $this->adapter->execute('insert into '.$tableName.' set '.$realValue);
         }
         fclose ($path);

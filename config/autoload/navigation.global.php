@@ -13,6 +13,11 @@ return array(
                     )
                 ),
              ),
+             array(
+                 'label' => 'Dashboard',
+                 'route' => 'dashboard',
+                 'class' => 'fa fa-home'
+             ),
          ),
      ),
      'service_manager' => array(

@@ -1264,7 +1264,6 @@ ul.sidebar-menu li ul.submenu li a{
 	line-height: 120%;
 	position: relative;
 	font-size: 13px;
-	border-left: 1px solid #656D78;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -1289,9 +1288,10 @@ ul.sidebar-menu li ul.submenu li.active a:focus{
 }
 
 ul.sidebar-menu li ul.submenu li a:before{
-	content: "\2014\00a0";
-	margin-left: -1px;
-	color: #79818B;
+    content: ">";
+    margin-left: 10px;
+    margin-right: 5px;
+    color: #79818B;
 }
 ul.sidebar-menu.online-user li a{
 	padding: 10px 20px 10px 60px;
