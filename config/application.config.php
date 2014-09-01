@@ -7,7 +7,8 @@ return array(
 
         'CmsIr\Authentication',
         'CmsIr\Authorize',
-        'CmsIr\Dashboard'
+        'CmsIr\Dashboard',
+        'CmsIr\Users',
     ),
     'module_listener_options' => array(
         'module_paths' => array(

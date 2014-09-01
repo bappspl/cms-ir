@@ -20,6 +20,9 @@ return array(
                 'CmsIr\Dashboard\Controller\Index' => array(
                     'all'	=> 'user',
                 ),
+                'CmsIr\Users\Controller\Index' => array(
+                    'all'	=> 'admin',
+                ),
             )
         )
     )
