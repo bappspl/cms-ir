@@ -21,7 +21,7 @@ return array(
                     'all'	=> 'user',
                 ),
                 'CmsIr\Users\Controller\Index' => array(
-                    'all'	=> 'admin',
+                    'all'	=> 'superadmin',
                 ),
             )
         )
