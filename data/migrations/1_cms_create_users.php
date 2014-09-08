@@ -38,7 +38,7 @@ class CmsCreateUsers extends AbstractMigration
     public function insertValues($tableName, $tableColumns)
     {
         $path = fopen ('./data/fixtures/'.$tableName.'.csv',"r");
-        while (($data = fgetcsv($path, 1000, ";")) !== FALSE)  {
+        while (($data = fgetcsv($path, 1000, ",")) !== FALSE)  {
             $num = count($data);
             print($num);
             $value = '';
@@ -58,7 +58,7 @@ class CmsCreateUsers extends AbstractMigration
                 $i++;
             }
             $realValue = substr($value, 0, -2);
-            //var_dump($realValue);
+            //var_dump();
             $this->adapter->execute('insert into '.$tableName.' set '.$realValue);
         }
         fclose ($path);
