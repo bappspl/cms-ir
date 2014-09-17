@@ -107,5 +107,7 @@
               passthru="true"
                 />
     </target>
+
+    <target name="app:rebuild" depends="db:drop,db:create,db:migrate"/>
     
 </project>
