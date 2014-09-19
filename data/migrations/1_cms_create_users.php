@@ -58,7 +58,6 @@ class CmsCreateUsers extends AbstractMigration
                 $i++;
             }
             $realValue = substr($value, 0, -2);
-            //var_dump();
             $this->adapter->execute('insert into '.$tableName.' set '.$realValue);
         }
         fclose ($path);

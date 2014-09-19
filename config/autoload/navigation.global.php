@@ -27,11 +27,31 @@ return array(
                  'pages' => array(
                      array(
                          'label' => 'Dodaj nowy',
-                         'route' => 'users-create',
+                         'route' => 'user-create',
+                         'visibleInPrimary' => true
                      ),
                      array(
                          'label' => 'Lista użytkowników',
                          'route' => 'users-list',
+                         'visibleInPrimary' => true
+                     ),
+                     array(
+                         'label' => 'Edycja użytkownika',
+                         'route' => 'user-edit',
+                         'params' => array(),
+                         'visibleInPrimary' => false
+                     ),
+                     array(
+                         'label' => 'Podgląd użytkownika',
+                         'route' => 'user-preview',
+                         'params' => array(),
+                         'visibleInPrimary' => false
+                     ),
+                     array(
+                         'label' => 'Usuwanie użytkownika',
+                         'route' => 'user-delete',
+                         'params' => array(),
+                         'visibleInPrimary' => false
                      )
                  ),
              ),
