@@ -9,7 +9,7 @@ return array(
         'CmsIr\Authorize',
         'CmsIr\Dashboard',
         'CmsIr\Users',
-        'CmsIr\Zf2SlugGenerator',
+        'Zf2SlugGenerator',
     ),
     'module_listener_options' => array(
         'module_paths' => array(
