@@ -10,6 +10,36 @@ return array(
                  'id'    => 2,
              ),
              array(
+                 'label' => 'Slider',
+                 'route' => 'slider',
+                 'class' => 'fa fa-users',
+                 'id'    => 2,
+                 'pages' => array(
+                     array(
+                         'label' => 'Dodaj nowy',
+                         'route' => 'slider/create',
+                         'visibleInPrimary' => true
+                     ),
+                     array(
+                         'label' => 'Lista sliderów',
+                         'route' => 'slider',
+                         'visibleInPrimary' => true
+                     ),
+                     array(
+                         'label' => 'Edycja slidera',
+                         'route' => 'slider/edit',
+                         'params' => array(),
+                         'visibleInPrimary' => false
+                     ),
+                     array(
+                         'label' => 'Usuwanie slidera',
+                         'route' => 'slider/delete',
+                         'params' => array(),
+                         'visibleInPrimary' => false
+                     )
+                 ),
+             ),
+             array(
                  'label' => 'Użytkownicy',
                  'route' => 'fake',
                  'class' => 'fa fa-users',

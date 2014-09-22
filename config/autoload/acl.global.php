@@ -23,6 +23,9 @@ return array(
                 'CmsIr\Users\Controller\Index' => array(
                     'all'	=> 'superadmin',
                 ),
+                'CmsIr\Slider\Controller\Slider' => array(
+                    'all'	=> 'superadmin',
+                ),
             )
         )
     )
