@@ -20,7 +20,7 @@ return array(
                 'CmsIr\Dashboard\Controller\Index' => array(
                     'all'	=> 'user',
                 ),
-                'CmsIr\Users\Controller\Index' => array(
+                'CmsIr\Users\Controller\Users' => array(
                     'all'	=> 'superadmin',
                 ),
                 'CmsIr\Slider\Controller\Slider' => array(
