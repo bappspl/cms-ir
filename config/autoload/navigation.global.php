@@ -12,7 +12,7 @@ return array(
              array(
                  'label' => 'Slider',
                  'route' => 'slider',
-                 'class' => 'fa fa-users',
+                 'class' => 'fa fa-picture-o',
                  'id'    => 2,
                  'pages' => array(
                      array(
