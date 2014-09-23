@@ -16,6 +16,7 @@ class CmsCreateUsers extends AbstractMigration
              ->addColumn('email_confirmed', 'integer', array('limit' => 1))
              ->addColumn('role', 'integer' , array('limit' => 1))
              ->addColumn('active', 'integer' , array('limit' => 1))
+             ->addColumn('avatar', 'string' , array('null' => true))
              ->addColumn('registration_date', 'datetime')
              ->addColumn('registration_token', 'string')
              ->save();
@@ -29,6 +30,7 @@ class CmsCreateUsers extends AbstractMigration
                 'email_confirmed' => 'integer',
                 'role' => 'integer',
                 'active' => 'integer',
+                'avatar' => 'string',
                 'registration_date' => 'string',
                 'registration_token' => 'string'
             )
