@@ -87,53 +87,53 @@ $(document).ready(function(){
 	
 	
 	/** NICESCROLL AND SLIMSCROLL FUNCTION **/
-    $(".sidebar-nicescroller").niceScroll({
-		cursorcolor: "#121212",
-		cursorborder: "0px solid #fff",
-		cursorborderradius: "0px",
-		cursorwidth: "0px"
-	});
-    $(".sidebar-nicescroller-visible-scroller").niceScroll({
-		cursorcolor: "#121212",
-		cursorborder: "0px solid #fff",
-		cursorborderradius: "0px",
-		cursorwidth: "5px",
-		cursoropacitymax: 0.2
-	});
-	$(".sidebar-nicescroller").getNiceScroll().resize();
-    $(".right-sidebar-nicescroller").niceScroll({
-		cursorcolor: "#111",
-		cursorborder: "0px solid #fff",
-		cursorborderradius: "0px",
-		cursorwidth: "0px"
-	});
-	$(".right-sidebar-nicescroller").getNiceScroll().resize();
-	
-	$(function () {
-		"use strict";
-		$('.scroll-nav-dropdown').slimScroll({
-			height: '350px',
-			position: 'right',
-			size: '4px',
-			railOpacity: 0.3
-		});
-	});
-	
-	$(function () {
-		"use strict";
-		$('.scroll-chat-widget').slimScroll({
-			height: '330px',
-			position: 'right',
-			size: '4px',
-			railOpacity: 0.3,
-			railVisible: true,
-			alwaysVisible: true,
-			start : 'bottom'
-		});
-	});
-	if ($(window).width() < 768) {
-		$(".chat-wrap").removeClass("scroll-chat-widget");
-	}
+//    $(".sidebar-nicescroller").niceScroll({
+//		cursorcolor: "#121212",
+//		cursorborder: "0px solid #fff",
+//		cursorborderradius: "0px",
+//		cursorwidth: "0px"
+//	});
+//    $(".sidebar-nicescroller-visible-scroller").niceScroll({
+//		cursorcolor: "#121212",
+//		cursorborder: "0px solid #fff",
+//		cursorborderradius: "0px",
+//		cursorwidth: "5px",
+//		cursoropacitymax: 0.2
+//	});
+//	$(".sidebar-nicescroller").getNiceScroll().resize();
+//    $(".right-sidebar-nicescroller").niceScroll({
+//		cursorcolor: "#111",
+//		cursorborder: "0px solid #fff",
+//		cursorborderradius: "0px",
+//		cursorwidth: "0px"
+//	});
+//	$(".right-sidebar-nicescroller").getNiceScroll().resize();
+//
+//	$(function () {
+//		"use strict";
+//		$('.scroll-nav-dropdown').slimScroll({
+//			height: '350px',
+//			position: 'right',
+//			size: '4px',
+//			railOpacity: 0.3
+//		});
+//	});
+//
+//	$(function () {
+//		"use strict";
+//		$('.scroll-chat-widget').slimScroll({
+//			height: '330px',
+//			position: 'right',
+//			size: '4px',
+//			railOpacity: 0.3,
+//			railVisible: true,
+//			alwaysVisible: true,
+//			start : 'bottom'
+//		});
+//	});
+//	if ($(window).width() < 768) {
+//		$(".chat-wrap").removeClass("scroll-chat-widget");
+//	}
 	/** END NICESCROLL AND SLIMSCROLL FUNCTION **/
 	
 	
