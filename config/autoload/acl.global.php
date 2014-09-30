@@ -12,6 +12,9 @@ return array(
                 'Application\Controller\Index' => array(
                     'all'	=> 'guest',
                 ),
+                'Page\Controller\Page' => array(
+                    'all'	=> 'guest',
+                ),
 
                 // CMS
 				'CmsIr\Authentication\Controller\Index' => array(
