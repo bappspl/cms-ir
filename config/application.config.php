@@ -7,6 +7,7 @@ return array(
 
         'CmsIr\Authentication',
         'CmsIr\Authorize',
+        'CmsIr\System',
         'CmsIr\Dashboard',
         'CmsIr\Users',
         'CmsIr\Slider',
