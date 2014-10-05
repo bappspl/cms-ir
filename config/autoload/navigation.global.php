@@ -10,6 +10,24 @@ return array(
                  'id'    => 2,
              ),
              array(
+                 'label' => 'Menu',
+                 'route' => 'fake',
+                 'class' => 'fa fa-bars',
+                 'id'    => 4,
+                 'pages' => array(
+                     array(
+                         'label' => 'Lista menu',
+                         'route' => 'menu-list',
+                         'visibleInPrimary' => true
+                     ),
+                     array(
+                         'label' => 'Edycja menu',
+                         'route' => 'menu-edit',
+                         'visibleInPrimary' => false
+                     ),
+                 ),
+             ),
+             array(
                  'label' => 'Slider',
                  'route' => 'slider',
                  'class' => 'fa fa-picture-o',

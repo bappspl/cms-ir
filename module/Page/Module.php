@@ -12,6 +12,13 @@ class Module
         $eventManager        = $e->getApplication()->getEventManager();
         $moduleRouteListener = new ModuleRouteListener();
         $moduleRouteListener->attach($eventManager);
+
+        $sm = $e->getApplication()->getServiceManager();
+        $menu = $this->getMenuService($sm)->getMenuByMachineName('main-menu');
+
+        $viewModel = $e->getViewModel();
+        $viewModel->menu = $menu;
+
     }
 
     public function getConfig()
@@ -28,5 +35,13 @@ class Module
                 ),
             ),
         );
+    }
+
+    /**
+     * @return \CmsIr\Menu\Service\MenuService
+     */
+    public function getMenuService($sm)
+    {
+        return$sm->get('CmsIr\Menu\Service\MenuService');
     }
 }

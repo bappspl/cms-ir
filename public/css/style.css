@@ -95,7 +95,11 @@ h1.less-distance,h2.less-distance,h3.less-distance,h4.less-distance,h5.less-dist
 	padding: 2px 0;
 	margin: 2px 0;
 }
-
+.space {
+    float: right;
+    width: 10px;
+    height: 34px;
+}
 
 /**
 +++++++++++++++++++++++++++++++++++++++++++

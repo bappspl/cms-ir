@@ -16,7 +16,17 @@ class PageController extends AbstractActionController
 {
     public function homeAction()
     {
+//        $menu = $this->getMenuService()->getMenuByMachineName('main-menu');
+//        $this->layout()->menu = $menu;
         $this->layout('layout/home');
         return new ViewModel();
+    }
+
+    /**
+     * @return \CmsIr\Menu\Service\MenuService
+     */
+    public function getMenuService()
+    {
+        return $this->getServiceLocator()->get('CmsIr\Menu\Service\MenuService');
     }
 }

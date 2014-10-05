@@ -10,6 +10,7 @@ return array(
         'CmsIr\Authorize',
         'CmsIr\System',
         'CmsIr\Dashboard',
+        'CmsIr\Menu',
         'CmsIr\Users',
         'CmsIr\Slider',
     ),
