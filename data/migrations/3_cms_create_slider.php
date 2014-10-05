@@ -39,13 +39,13 @@ class CmsCreateSlider extends AbstractMigration
             foreach ($tableColumns as $kCol => $vCol) {
                 switch ($vCol) {
                     case 'text':
-                        $value = $value . $kCol.' = "'.$data[$i]. '", ';
+                        $value = $value . $kCol.' = "'.iconv("UTF-8", "ISO-8859-1//TRANSLIT", $data[$i]). '", ';
                         break;
                     case 'string':
-                        $value = $value . $kCol.' = "'.$data[$i]. '", ';
+                        $value = $value . $kCol.' = "'.iconv("UTF-8", "ISO-8859-1//TRANSLIT", $data[$i]). '", ';
                         break;
                     case 'integer':
-                        $value = $value . $kCol.' = '.$data[$i] . ', ';
+                        $value = $value . $kCol.' = '.iconv("UTF-8", "ISO-8859-1//TRANSLIT", $data[$i]) . ', ';
                         break;
                 }
                 $i++;

@@ -14,7 +14,6 @@ return array(
         'template_map' => array(
             'layout/home' => __DIR__ . '/../view/layout/home.phtml',
             'partial/layout/header' => __DIR__ . '/../view/partial/layout/header.phtml',
-            'partial/layout/header-mainmenu' => __DIR__ . '/../view/partial/layout/header-mainmenu.phtml',
             'partial/layout/header-navbar' => __DIR__ . '/../view/partial/layout/header-navbar.phtml',
             'partial/layout/footer' => __DIR__ . '/../view/partial/layout/footer.phtml',
             'partial/layout/footer-about' => __DIR__ . '/../view/partial/layout/footer-about.phtml',
@@ -34,7 +33,11 @@ return array(
         ),
         'display_exceptions' => true,
     ),
-
+    'view_helpers' => array(
+        'invokables'=> array(
+            'menuHelper' => 'CmsIr\Menu\View\Helper\MenuHelper',
+        ),
+    ),
     'asset_manager' => array(
         'resolver_configs' => array(
             'paths' => array(

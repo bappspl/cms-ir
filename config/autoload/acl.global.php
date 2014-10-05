@@ -23,6 +23,9 @@ return array(
                 'CmsIr\Dashboard\Controller\Index' => array(
                     'all'	=> 'user',
                 ),
+                'CmsIr\Menu\Controller\Menu' => array(
+                    'all'	=> 'superadmin',
+                ),
                 'CmsIr\Users\Controller\Users' => array(
                     'all'	=> 'superadmin',
                 ),

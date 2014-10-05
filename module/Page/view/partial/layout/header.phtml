@@ -2,7 +2,15 @@
 <div class="top-navbar light-color">
     <div class="container">
         <?php echo $this->partial('partial/layout/header-navbar'); ?>
-        <?php echo $this->partial('partial/layout/header-mainmenu'); ?>
+
+
+        <?php
+            $ulClass = 'menus';
+            $liClass = 'parent';
+            $subUlClass = 'sub-menus';
+            $subLiClass = 'sub-list';
+        ?>
+        <?php echo $this->menuHelper()->renderMenu($menu, $ulClass, $liClass, $subUlClass, $subLiClass); ?>
 
     </div><!-- /.container -->
 </div><!-- /.top-navbar -->
