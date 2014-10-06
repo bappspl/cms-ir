@@ -54,7 +54,19 @@ return array(
                          'route' => 'slider/delete',
                          'params' => array(),
                          'visibleInPrimary' => false
-                     )
+                     ),
+                     array(
+                         'label' => 'Lista elementów',
+                         'route' => 'slider/items',
+                         'params' => array(),
+                         'visibleInPrimary' => false
+                     ),
+                     array(
+                         'label' => 'Dodaj nowy element',
+                         'route' => 'slider/items/create',
+                         'params' => array(),
+                         'visibleInPrimary' => false
+                     ),
                  ),
              ),
              array(
