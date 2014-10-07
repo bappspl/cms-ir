@@ -105,6 +105,34 @@ return array(
                      )
                  ),
              ),
+             array(
+                 'label' => 'Newsletter',
+                 'route' => 'fake-newsletter',
+                 'class' => 'fa fa-envelope-o',
+                 'id'    => 4,
+                 'pages' => array(
+                     array(
+                         'label' => 'Wiadomości',
+                         'route' => 'newsletter',
+                         'visibleInPrimary' => true
+                     ),
+                     array(
+                         'label' => 'Subskrybenci',
+                         'route' => 'subscriber-list',
+                         'visibleInPrimary' => true
+                     ),
+                     array(
+                         'label' => 'Grupy subskrybentów',
+                         'route' => 'subscriber-group',
+                         'visibleInPrimary' => true
+                     ),
+                     array(
+                         'label' => 'Ustawienia',
+                         'route' => 'newsletter-settings',
+                         'visibleInPrimary' => true
+                     ),
+                 ),
+             ),
          ),
      ),
      'service_manager' => array(

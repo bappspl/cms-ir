@@ -32,7 +32,7 @@ class CmsCreateNewsletter extends AbstractMigration
         $this->table('cms_newsletter', array())
             ->addColumn('subject', 'string')
             ->addColumn('text', 'text')
-            ->addColumn('group', 'text', array('null'=>true))
+            ->addColumn('groups', 'text', array('null'=>true))
             ->addColumn('status_id', 'integer')
             ->addForeignKey('status_id', 'cms_status', 'id', array('delete' => 'CASCADE', 'update' => 'NO_ACTION'))
             ->save();

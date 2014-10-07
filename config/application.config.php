@@ -13,6 +13,7 @@ return array(
         'CmsIr\Menu',
         'CmsIr\Users',
         'CmsIr\Slider',
+        'CmsIr\Newsletter',
     ),
     'module_listener_options' => array(
         'module_paths' => array(
