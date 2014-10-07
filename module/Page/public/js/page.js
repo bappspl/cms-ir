@@ -1,9 +1,9 @@
-$("#full-img-slide").backstretch([
-    "img/image-1.jpg"
-], {
-    fade: 750,
-    duration: 6000
-});
+//$("#full-img-slide").backstretch([
+//    "img/image-1.jpg"
+//], {
+//    fade: 750,
+//    duration: 6000
+//});
 $(document).ready(function(){
     $(function(){
         var shrinkHeader = 250;
