@@ -67,6 +67,12 @@ return array(
                          'params' => array(),
                          'visibleInPrimary' => false
                      ),
+                     array(
+                         'label' => 'Edycja elementu',
+                         'route' => 'slider/items/edit',
+                         'params' => array(),
+                         'visibleInPrimary' => false
+                     ),
                  ),
              ),
              array(
