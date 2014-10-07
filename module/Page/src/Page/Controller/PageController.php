@@ -18,8 +18,17 @@ class PageController extends AbstractActionController
     {
 //        $menu = $this->getMenuService()->getMenuByMachineName('main-menu');
 //        $this->layout()->menu = $menu;
+
+        $slider = $this->getSliderervice()->findOneBySlug('slider-glowny');
+        $items = $slider->getItems();
+
         $this->layout('layout/home');
-        return new ViewModel();
+
+        $viewParams = array();
+        $viewParams['items'] = $items;
+        $viewModel = new ViewModel();
+        $viewModel->setVariables($viewParams);
+        return $viewModel;
     }
 
     /**
@@ -28,5 +37,13 @@ class PageController extends AbstractActionController
     public function getMenuService()
     {
         return $this->getServiceLocator()->get('CmsIr\Menu\Service\MenuService');
+    }
+
+    /**
+     * @return \CmsIr\Slider\Service\SliderService
+     */
+    public function getSliderervice()
+    {
+        return $this->getServiceLocator()->get('CmsIr\Slider\Service\SliderService');
     }
 }
