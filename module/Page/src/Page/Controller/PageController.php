@@ -19,7 +19,7 @@ class PageController extends AbstractActionController
         $menu = $this->getMenuService()->getMenuByMachineName('main-menu');
         $this->layout()->menu = $menu;
 
-        $slider = $this->getSliderervice()->findOneBySlug('slider-glowny');
+        $slider = $this->getSliderService()->findOneBySlug('slider-glowny');
         $items = $slider->getItems();
 
         $this->layout('layout/home');
@@ -29,6 +29,26 @@ class PageController extends AbstractActionController
         $viewModel = new ViewModel();
         $viewModel->setVariables($viewParams);
         return $viewModel;
+    }
+
+    public function viewPageAction()
+    {
+        $this->layout('layout/home');
+
+        $slug = $this->params('slug');
+
+        $page = $this->getPageService()->findOneBySlug($slug);
+
+        if(empty($page)){
+            $this->getResponse()->setStatusCode(404);
+        }
+
+        $viewParams = array();
+        $viewParams['page'] = $page;
+        $viewModel = new ViewModel();
+        $viewModel->setVariables($viewParams);
+        return $viewModel;
+
     }
 
     /**
@@ -42,8 +62,16 @@ class PageController extends AbstractActionController
     /**
      * @return \CmsIr\Slider\Service\SliderService
      */
-    public function getSliderervice()
+    public function getSliderService()
     {
         return $this->getServiceLocator()->get('CmsIr\Slider\Service\SliderService');
+    }
+
+    /**
+     * @return \CmsIr\Page\Service\PageService
+     */
+    public function getPageService()
+    {
+        return $this->getServiceLocator()->get('CmsIr\Page\Service\PageService');
     }
 }

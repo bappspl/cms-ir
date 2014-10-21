@@ -11,4 +11,14 @@ return array(
             ),
         ),
     ),
+    'viewPage' => array(
+        'type' => 'Zend\Mvc\Router\Http\Segment',
+        'options' => array(
+            'route'    => '/strona/:slug',
+            'defaults' => array(
+                'controller' => 'Page\Controller\Page',
+                'action'     => 'viewPage',
+            ),
+        ),
+    ),
 );

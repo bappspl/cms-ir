@@ -29,7 +29,7 @@ return array(
             'partial/page/testimonials' => __DIR__ . '/../view/partial/page/testimonials.phtml',
         ),
         'template_path_stack' => array(
-            'page' => __DIR__ . '/../view'
+            'page_home_site' => __DIR__ . '/../view'
         ),
         'display_exceptions' => true,
     ),
