@@ -28,6 +28,36 @@ return array(
                  ),
              ),
              array(
+                 'label' => 'Strony',
+                 'route' => 'page',
+                 'class' => 'fa fa-file-text-o',
+                 'id'    => 2,
+                 'pages' => array(
+                     array(
+                         'label' => 'Dodaj nową',
+                         'route' => 'page/create',
+                         'visibleInPrimary' => true
+                     ),
+                     array(
+                         'label' => 'Lista stron',
+                         'route' => 'page',
+                         'visibleInPrimary' => true
+                     ),
+                     array(
+                         'label' => 'Edycja strony',
+                         'route' => 'page/edit',
+                         'params' => array(),
+                         'visibleInPrimary' => false
+                     ),
+                     array(
+                         'label' => 'Usuwanie strony',
+                         'route' => 'page/delete',
+                         'params' => array(),
+                         'visibleInPrimary' => false
+                     ),
+                 ),
+             ),
+             array(
                  'label' => 'Slider',
                  'route' => 'slider',
                  'class' => 'fa fa-picture-o',

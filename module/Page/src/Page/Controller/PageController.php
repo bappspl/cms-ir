@@ -16,8 +16,8 @@ class PageController extends AbstractActionController
 {
     public function homeAction()
     {
-//        $menu = $this->getMenuService()->getMenuByMachineName('main-menu');
-//        $this->layout()->menu = $menu;
+        $menu = $this->getMenuService()->getMenuByMachineName('main-menu');
+        $this->layout()->menu = $menu;
 
         $slider = $this->getSliderervice()->findOneBySlug('slider-glowny');
         $items = $slider->getItems();

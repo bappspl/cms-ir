@@ -32,6 +32,9 @@ return array(
                 'CmsIr\Slider\Controller\Slider' => array(
                     'all'	=> 'superadmin',
                 ),
+                'CmsIr\Page\Controller\Page' => array(
+                    'all'	=> 'superadmin',
+                ),
             )
         )
     )
