@@ -2,13 +2,15 @@
 
 namespace Page\Controller;
 
-use CmsIr\Newsletter\Model\Subscriber;
-use Zend\Json\Json;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 
+
+use Zend\Authentication\AuthenticationService;
+use Zend\Authentication\Result;
+use Zend\Authentication\Storage\Session as SessionStorage;
+use Zend\Db\Adapter\Adapter as DbAdapter;
 use Zend\Authentication\Adapter\DbTable as AuthAdapter;
-use Zend\Mail\Message;
 
 class PageController extends AbstractActionController
 {
@@ -27,6 +29,26 @@ class PageController extends AbstractActionController
         $viewModel = new ViewModel();
         $viewModel->setVariables($viewParams);
         return $viewModel;
+    }
+
+    public function viewPageAction()
+    {
+        $this->layout('layout/home');
+
+        $slug = $this->params('slug');
+
+        $page = $this->getPageService()->findOneBySlug($slug);
+
+        if(empty($page)){
+            $this->getResponse()->setStatusCode(404);
+        }
+
+        $viewParams = array();
+        $viewParams['page'] = $page;
+        $viewModel = new ViewModel();
+        $viewModel->setVariables($viewParams);
+        return $viewModel;
+
     }
 
     public function saveSubscriberAjaxAction ()
@@ -131,6 +153,14 @@ class PageController extends AbstractActionController
     public function getSliderService()
     {
         return $this->getServiceLocator()->get('CmsIr\Slider\Service\SliderService');
+    }
+
+    /**
+     * @return \CmsIr\Page\Service\PageService
+     */
+    public function getPageService()
+    {
+        return $this->getServiceLocator()->get('CmsIr\Page\Service\PageService');
     }
 
     /**

@@ -31,7 +31,7 @@ return array(
             'partial/newsletter-modal' => __DIR__ . '/../view/partial/newsletter-modal.phtml',
         ),
         'template_path_stack' => array(
-            'page' => __DIR__ . '/../view'
+            'page_home_site' => __DIR__ . '/../view'
         ),
         'display_exceptions' => true,
     ),

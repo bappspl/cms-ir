@@ -14,6 +14,7 @@ return array(
         'CmsIr\Users',
         'CmsIr\Slider',
         'CmsIr\Newsletter',
+        'CmsIr\Page',
     ),
     'module_listener_options' => array(
         'module_paths' => array(

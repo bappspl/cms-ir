@@ -38,6 +38,9 @@ return array(
                 'CmsIr\Newsletter\Controller\Subscriber' => array(
                     'all'	=> 'superadmin',
                 ),
+                'CmsIr\Page\Controller\Page' => array(
+                    'all'	=> 'superadmin',
+                ),
             )
         )
     )
