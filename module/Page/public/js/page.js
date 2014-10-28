@@ -20,4 +20,22 @@ $(document).ready(function(){
             return window.pageYOffset || document.documentElement.scrollTop;
         }
     });
-})
+
+    $('#newsletter').submit(function(e) {
+        e.preventDefault();
+        var email = $('#newsletter input[type="email"]').val();
+        $.ajax({
+            type: "POST",
+            url: "/save-new-subscriber",
+            dataType : 'json',
+            data: {
+                email: email
+            },
+            success: function(json)
+            {
+                $('#newsletter input[type="email"]').val('');
+                $('#newsletterModal').modal('show');
+            }
+        });
+    });
+});

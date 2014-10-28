@@ -201,13 +201,13 @@ $(document).ready(function(){
 	/** BEGIN SUMMERNOTE **/
 	if ($('.summernote-lg').length > 0){
 		$('.summernote-lg').summernote({
-			height: 400
+			height: 170
 		});
 	}
 	
 	if ($('.summernote-sm').length > 0){
 		$('.summernote-sm').summernote({
-			height: 200,
+			height: 111,
 			  toolbar: [
 				//['style', ['style']], // no style button
 				['style', ['bold', 'italic', 'underline', 'clear']],

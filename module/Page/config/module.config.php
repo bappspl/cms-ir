@@ -27,6 +27,8 @@ return array(
             'partial/page/offer' => __DIR__ . '/../view/partial/page/offer.phtml',
             'partial/page/slider' => __DIR__ . '/../view/partial/page/slider.phtml',
             'partial/page/testimonials' => __DIR__ . '/../view/partial/page/testimonials.phtml',
+
+            'partial/newsletter-modal' => __DIR__ . '/../view/partial/newsletter-modal.phtml',
         ),
         'template_path_stack' => array(
             'page' => __DIR__ . '/../view'

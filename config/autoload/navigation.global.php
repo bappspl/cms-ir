@@ -123,14 +123,59 @@ return array(
                          'visibleInPrimary' => true
                      ),
                      array(
+                         'label' => 'Tworzenie wiadomości',
+                         'route' => 'create-newsletter',
+                         'visibleInPrimary' => false
+                     ),
+                     array(
+                         'label' => 'Edycja wiadomości',
+                         'route' => 'edit-newsletter',
+                         'visibleInPrimary' => false
+                     ),
+                     array(
+                         'label' => 'Podgląd wiadomości',
+                         'route' => 'preview-newsletter',
+                         'visibleInPrimary' => false
+                     ),
+                     array(
                          'label' => 'Subskrybenci',
                          'route' => 'subscriber-list',
                          'visibleInPrimary' => true
                      ),
                      array(
+                         'label' => 'Tworzenie subskrybenta',
+                         'route' => 'subscriber-list/create-subscriber',
+                         'visibleInPrimary' => false
+                     ),
+                     array(
+                         'label' => 'Edycja subskrybenta',
+                         'route' => 'subscriber-list/edit-subscriber',
+                         'visibleInPrimary' => false
+                     ),
+                     array(
+                         'label' => 'Podgląd subskrybenta',
+                         'route' => 'subscriber-list/preview-subscriber',
+                         'visibleInPrimary' => false
+                     ),
+                     array(
                          'label' => 'Grupy subskrybentów',
                          'route' => 'subscriber-group',
-                         'visibleInPrimary' => true
+                         'visibleInPrimary' => true,
+                     ),
+                     array(
+                         'label' => 'Tworzenie grupy',
+                         'route' => 'subscriber-group/create-group',
+                         'visibleInPrimary' => false
+                     ),
+                     array(
+                         'label' => 'Edycja grupy',
+                         'route' => 'subscriber-group/edit-group',
+                         'visibleInPrimary' => false
+                     ),
+                     array(
+                         'label' => 'Podgląd grupy',
+                         'route' => 'subscriber-group/preview-group',
+                         'visibleInPrimary' => false
                      ),
                      array(
                          'label' => 'Ustawienia',
