@@ -58,6 +58,26 @@ return array(
                  ),
              ),
              array(
+                 'label' => 'Wpisy',
+                 'route' => 'fake-post',
+                 'class' => 'fa fa-quote-right',
+                 'id'    => 2,
+                 'pages' => array(
+                     array(
+                         'label' => 'Lista newsów',
+                         'route' => 'post-list',
+                         'params' => array('category' => 'news'),
+                         'visibleInPrimary' => true
+                     ),
+                     array(
+                         'label' => 'Lista referencji',
+                         'route' => 'post-list',
+                         'params' => array('category' => 'testimonials'),
+                         'visibleInPrimary' => true
+                     ),
+                 ),
+             ),
+             array(
                  'label' => 'Slider',
                  'route' => 'slider',
                  'class' => 'fa fa-picture-o',

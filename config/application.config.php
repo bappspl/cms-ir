@@ -15,6 +15,7 @@ return array(
         'CmsIr\Slider',
         'CmsIr\Newsletter',
         'CmsIr\Page',
+        'CmsIr\Post',
     ),
     'module_listener_options' => array(
         'module_paths' => array(

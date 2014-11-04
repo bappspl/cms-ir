@@ -41,6 +41,9 @@ return array(
                 'CmsIr\Page\Controller\Page' => array(
                     'all'	=> 'superadmin',
                 ),
+                'CmsIr\Post\Controller\Post' => array(
+                    'all'	=> 'superadmin',
+                ),
             )
         )
     )
