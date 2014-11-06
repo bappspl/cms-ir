@@ -70,10 +70,46 @@ return array(
                          'visibleInPrimary' => true
                      ),
                      array(
+                         'label' => 'Tworzenie newsa',
+                         'route' => 'post-list/post-create',
+                         'params' => array('category' => 'news'),
+                         'visibleInPrimary' => false
+                     ),
+                     array(
+                         'label' => 'Edycja newsa',
+                         'route' => 'post-list/post-edit',
+                         'params' => array('category' => 'news'),
+                         'visibleInPrimary' => false
+                     ),
+                     array(
+                         'label' => 'Podgląd newsa',
+                         'route' => 'post-list/post-preview',
+                         'params' => array('category' => 'news'),
+                         'visibleInPrimary' => false
+                     ),
+                     array(
                          'label' => 'Lista referencji',
                          'route' => 'post-list',
                          'params' => array('category' => 'testimonials'),
                          'visibleInPrimary' => true
+                     ),
+                     array(
+                         'label' => 'Tworzenie referencji',
+                         'route' => 'post-list/post-create',
+                         'params' => array('category' => 'testimonials'),
+                         'visibleInPrimary' => false
+                     ),
+                     array(
+                         'label' => 'Edycja referencji',
+                         'route' => 'post-list/post-edit',
+                         'params' => array('category' => 'testimonials'),
+                         'visibleInPrimary' => false
+                     ),
+                     array(
+                         'label' => 'Podgląd referencji',
+                         'route' => 'post-list/post-preview',
+                         'params' => array('category' => 'testimonials'),
+                         'visibleInPrimary' => false
                      ),
                  ),
              ),
