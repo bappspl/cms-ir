@@ -29,7 +29,7 @@ return array(
              ),
              array(
                  'label' => 'Strony',
-                 'route' => 'page',
+                 'route' => 'page-main',
                  'class' => 'fa fa-file-text-o',
                  'id'    => 2,
                  'pages' => array(
@@ -79,7 +79,7 @@ return array(
              ),
              array(
                  'label' => 'Slider',
-                 'route' => 'slider',
+                 'route' => 'slider-main',
                  'class' => 'fa fa-picture-o',
                  'id'    => 2,
                  'pages' => array(
