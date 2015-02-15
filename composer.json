@@ -17,6 +17,7 @@
         "robmorgan/phinx": "*",
 		"rwoverdijk/assetmanager": "*",
         "cms-ir/cms-ir": "dev-master",
-        "symfony/yaml": "2.4.*"
+        "symfony/yaml": "2.4.*",
+		"dannytrue/phpthumb": "dev-master"
     }
 }
