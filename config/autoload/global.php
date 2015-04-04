@@ -13,4 +13,6 @@ return array(
          ),
      ),
      'static_salt' => 'aFGQ475SDsdfsaf2342',
+    'app_name' => 'cms-master',
+    'logger_mail' => true
 );

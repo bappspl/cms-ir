@@ -11,18 +11,18 @@ return array(
              ),
              array(
                  'label' => 'Menu',
-                 'route' => 'fake',
+                 'route' => 'menu-main',
                  'class' => 'fa fa-bars',
                  'id'    => 4,
                  'pages' => array(
                      array(
                          'label' => 'Lista menu',
-                         'route' => 'menu-list',
+                         'route' => 'menu',
                          'visibleInPrimary' => true
                      ),
                      array(
                          'label' => 'Edycja menu',
-                         'route' => 'menu-edit',
+                         'route' => 'menu/edit',
                          'visibleInPrimary' => false
                      ),
                  ),
@@ -59,55 +59,55 @@ return array(
              ),
              array(
                  'label' => 'Wpisy',
-                 'route' => 'fake-post',
+                 'route' => 'post-main',
                  'class' => 'fa fa-quote-right',
                  'id'    => 2,
                  'pages' => array(
                      array(
                          'label' => 'Lista newsów',
-                         'route' => 'post-list',
+                         'route' => 'post',
                          'params' => array('category' => 'news'),
                          'visibleInPrimary' => true
                      ),
                      array(
                          'label' => 'Tworzenie newsa',
-                         'route' => 'post-list/post-create',
+                         'route' => 'post/create',
                          'params' => array('category' => 'news'),
                          'visibleInPrimary' => false
                      ),
                      array(
                          'label' => 'Edycja newsa',
-                         'route' => 'post-list/post-edit',
+                         'route' => 'post/edit',
                          'params' => array('category' => 'news'),
                          'visibleInPrimary' => false
                      ),
                      array(
                          'label' => 'Podgląd newsa',
-                         'route' => 'post-list/post-preview',
+                         'route' => 'post/preview',
                          'params' => array('category' => 'news'),
                          'visibleInPrimary' => false
                      ),
                      array(
                          'label' => 'Lista referencji',
-                         'route' => 'post-list',
+                         'route' => 'post',
                          'params' => array('category' => 'testimonials'),
                          'visibleInPrimary' => true
                      ),
                      array(
                          'label' => 'Tworzenie referencji',
-                         'route' => 'post-list/post-create',
+                         'route' => 'post/create',
                          'params' => array('category' => 'testimonials'),
                          'visibleInPrimary' => false
                      ),
                      array(
                          'label' => 'Edycja referencji',
-                         'route' => 'post-list/post-edit',
+                         'route' => 'post/edit',
                          'params' => array('category' => 'testimonials'),
                          'visibleInPrimary' => false
                      ),
                      array(
                          'label' => 'Podgląd referencji',
-                         'route' => 'post-list/post-preview',
+                         'route' => 'post/preview',
                          'params' => array('category' => 'testimonials'),
                          'visibleInPrimary' => false
                      ),
@@ -163,35 +163,41 @@ return array(
              ),
              array(
                  'label' => 'Użytkownicy',
-                 'route' => 'fake',
+                 'route' => 'users-main',
                  'class' => 'fa fa-users',
                  'id'    => 4,
                  'pages' => array(
                      array(
                          'label' => 'Dodaj nowy',
-                         'route' => 'user-create',
+                         'route' => 'users/create',
                          'visibleInPrimary' => true
                      ),
                      array(
                          'label' => 'Lista użytkowników',
-                         'route' => 'users-list',
+                         'route' => 'users',
                          'visibleInPrimary' => true
                      ),
                      array(
                          'label' => 'Edycja użytkownika',
-                         'route' => 'user-edit',
+                         'route' => 'users/edit',
                          'params' => array(),
                          'visibleInPrimary' => false
                      ),
                      array(
                          'label' => 'Podgląd użytkownika',
-                         'route' => 'user-preview',
+                         'route' => 'users/preview',
                          'params' => array(),
                          'visibleInPrimary' => false
                      ),
                      array(
                          'label' => 'Usuwanie użytkownika',
-                         'route' => 'user-delete',
+                         'route' => 'users/delete',
+                         'params' => array(),
+                         'visibleInPrimary' => false
+                     )  ,
+                     array(
+                         'label' => 'Zmiana hasła',
+                         'route' => 'users/change-password',
                          'params' => array(),
                          'visibleInPrimary' => false
                      )
@@ -199,7 +205,7 @@ return array(
              ),
              array(
                  'label' => 'Newsletter',
-                 'route' => 'fake-newsletter',
+                 'route' => 'newsletter-main',
                  'class' => 'fa fa-envelope-o',
                  'id'    => 4,
                  'pages' => array(
@@ -210,62 +216,62 @@ return array(
                      ),
                      array(
                          'label' => 'Tworzenie wiadomości',
-                         'route' => 'create-newsletter',
+                         'route' => 'newsletter/create',
                          'visibleInPrimary' => false
                      ),
                      array(
                          'label' => 'Edycja wiadomości',
-                         'route' => 'edit-newsletter',
+                         'route' => 'newsletter/edit',
                          'visibleInPrimary' => false
                      ),
                      array(
                          'label' => 'Podgląd wiadomości',
-                         'route' => 'preview-newsletter',
+                         'route' => 'newsletter/preview',
                          'visibleInPrimary' => false
                      ),
                      array(
                          'label' => 'Subskrybenci',
-                         'route' => 'subscriber-list',
+                         'route' => 'newsletter/subscriber-list',
                          'visibleInPrimary' => true
                      ),
                      array(
                          'label' => 'Tworzenie subskrybenta',
-                         'route' => 'subscriber-list/create-subscriber',
+                         'route' => 'newsletter/subscriber-list/create',
                          'visibleInPrimary' => false
                      ),
                      array(
                          'label' => 'Edycja subskrybenta',
-                         'route' => 'subscriber-list/edit-subscriber',
+                         'route' => 'newsletter/subscriber-list/edit',
                          'visibleInPrimary' => false
                      ),
                      array(
                          'label' => 'Podgląd subskrybenta',
-                         'route' => 'subscriber-list/preview-subscriber',
+                         'route' => 'newsletter/subscriber-list/preview',
                          'visibleInPrimary' => false
                      ),
                      array(
                          'label' => 'Grupy subskrybentów',
-                         'route' => 'subscriber-group',
+                         'route' => 'newsletter/subscriber-group',
                          'visibleInPrimary' => true,
                      ),
                      array(
                          'label' => 'Tworzenie grupy',
-                         'route' => 'subscriber-group/create-group',
+                         'route' => 'newsletter/subscriber-group/create',
                          'visibleInPrimary' => false
                      ),
                      array(
                          'label' => 'Edycja grupy',
-                         'route' => 'subscriber-group/edit-group',
+                         'route' => 'newsletter/subscriber-group/edit',
                          'visibleInPrimary' => false
                      ),
                      array(
                          'label' => 'Podgląd grupy',
-                         'route' => 'subscriber-group/preview-group',
+                         'route' => 'newsletter/subscriber-group/preview',
                          'visibleInPrimary' => false
                      ),
                      array(
                          'label' => 'Ustawienia',
-                         'route' => 'newsletter-settings',
+                         'route' => 'newsletter/settings',
                          'visibleInPrimary' => true
                      ),
                  ),
