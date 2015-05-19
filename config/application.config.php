@@ -16,6 +16,9 @@ return array(
         'CmsIr\Newsletter',
         'CmsIr\Page',
         'CmsIr\Post',
+        'CmsIr\Dictionary',
+        'CmsIr\File',
+        'CmsIr\Banner',
     ),
     'module_listener_options' => array(
         'module_paths' => array(

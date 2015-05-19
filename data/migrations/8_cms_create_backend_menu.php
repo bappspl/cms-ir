@@ -2,17 +2,24 @@
 use Phinx\Migration\AbstractMigration;
 use Phinx\Db\Adapter\MysqlAdapter;
 
-class CmsCreateStatus extends AbstractMigration
+class CmsCreateBackendMenu extends AbstractMigration
 {
 
     public function up()
     {
-        $this->table('cms_status', array())
+        $this->table('cms_backend_menu', array())
              ->addColumn('name', 'string')
-             ->addColumn('slug', 'string')
+             ->addColumn('label', 'string')
+             ->addColumn('route', 'text')
+             ->addColumn('class', 'string', array('null'=>true))
+             ->addColumn('access', 'integer', array('null'=>true))
+             ->addColumn('visible_in_primary', 'string', array('null'=>true))
+             ->addColumn('parent_id', 'integer', array('null'=>true))
+             ->addColumn('params', 'text', array('null'=>true))
+             ->addColumn('website_id', 'integer', array('null'=>true))
              ->save();
 
-        $this->insertYamlValues('cms_status');
+        $this->insertYamlValues('cms_backend_menu');
     }
 
     public function insertYamlValues($tableName)
@@ -28,7 +35,6 @@ class CmsCreateStatus extends AbstractMigration
             }
 
             $realValue = substr($value, 0, -2);
-
             $this->execute("SET NAMES UTF8");
             $this->adapter->execute('insert into '.$tableName.' set '.$realValue);
         }
@@ -36,6 +42,6 @@ class CmsCreateStatus extends AbstractMigration
 
     public function down()
     {
-        $this->dropTable('cms_status');
+        $this->dropTable('cms_backend_menu');
     }
 }

@@ -21,10 +21,12 @@ class CmsCreateSlider extends AbstractMigration
             ->addColumn('filename', 'string', array('null' => true))
             ->addColumn('status_id', 'integer')
             ->addColumn('position', 'integer')
+            ->addColumn('url', 'string')
             ->addForeignKey('slider_id', 'cms_slider', 'id')
             ->save();
 
         $this->insertYamlValues('cms_slider');
+        $this->createDirectory(array('files/slider'));
     }
 
     public function insertYamlValues($tableName)
@@ -43,6 +45,31 @@ class CmsCreateSlider extends AbstractMigration
 
             $this->execute("SET NAMES UTF8");
             $this->adapter->execute('insert into '.$tableName.' set '.$realValue);
+        }
+    }
+
+    public function createDirectory($dirs)
+    {
+        foreach($dirs as $dir)
+        {
+            $explodedDirs = explode('/', $dir);
+            $parentDir = $explodedDirs[0];
+
+            if(!is_dir('./public/'.$parentDir))
+            {
+                mkdir('./public/'.$parentDir);
+            }
+
+            if(!is_dir('./public/'.$dir))
+            {
+                mkdir('./public/'.$dir);
+            }
+
+            $files = glob('./public/'.$dir.'/*');
+            foreach($files as $file)
+            {
+                if(is_file($file)) unlink($file);
+            }
         }
     }
 

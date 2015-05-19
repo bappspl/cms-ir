@@ -17,9 +17,9 @@ return array(
                 ),
 
                 // CMS
-				'CmsIr\Authentication\Controller\Index' => array(
-					'all'	=> 'guest',
- 				),
+                'CmsIr\Authentication\Controller\Index' => array(
+                    'all'	=> 'guest',
+                ),
                 'CmsIr\Dashboard\Controller\Index' => array(
                     'all'	=> 'user',
                 ),
@@ -42,6 +42,16 @@ return array(
                     'all'	=> 'superadmin',
                 ),
                 'CmsIr\Post\Controller\Post' => array(
+                    'all'	=> 'superadmin',
+                ),
+                'CmsIr\System\Controller\System' => array(
+                    'createThumb'	=> 'guest',
+                    'saveEditorImages'	=> 'guest',
+                ),
+                'CmsIr\File\Controller\Gallery' => array(
+                    'all'	=> 'superadmin',
+                ),
+                'CmsIr\Banner\Controller\Banner' => array(
                     'all'	=> 'superadmin',
                 ),
             )

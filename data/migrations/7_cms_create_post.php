@@ -13,20 +13,44 @@ class CmsCreatePost extends AbstractMigration
              ->addColumn('status_id', 'integer')
              ->addColumn('category', 'string', array('null'=>true))
              ->addColumn('text', 'text')
+             ->addColumn('date_from', 'datetime', array('null'=>true))
+             ->addColumn('date_to', 'datetime', array('null'=>true))
+             ->addColumn('author_id', 'integer')
+             ->addColumn('filename_main', 'string', array('null'=>true))
              ->addForeignKey('status_id', 'cms_status', 'id', array('delete' => 'CASCADE', 'update' => 'NO_ACTION'))
+             ->addForeignKey('author_id', 'cms_users', 'id', array('delete' => 'CASCADE', 'update' => 'NO_ACTION'))
              ->save();
 
-        $this->table('cms_post_file', array())
-            ->addColumn('filename', 'string')
-            ->addColumn('post_id', 'integer')
-            ->addColumn('size', 'string')
-            ->addForeignKey('post_id', 'cms_post', 'id', array('delete' => 'CASCADE', 'update' => 'NO_ACTION'))
-            ->save();
+        $this->createDirectory(array('files/post', 'temp_files/post'));
+    }
+
+    public function createDirectory($dirs)
+    {
+        foreach($dirs as $dir)
+        {
+            $explodedDirs = explode('/', $dir);
+            $parentDir = $explodedDirs[0];
+
+            if(!is_dir('./public/'.$parentDir))
+            {
+                mkdir('./public/'.$parentDir);
+            }
+
+            if(!is_dir('./public/'.$dir))
+            {
+                mkdir('./public/'.$dir);
+            }
+
+            $files = glob('./public/'.$dir.'/*');
+            foreach($files as $file)
+            {
+                if(is_file($file)) unlink($file);
+            }
+        }
     }
 
     public function down()
     {
         $this->dropTable('cms_post');
-        $this->dropTable('cms_post_file');
     }
 }

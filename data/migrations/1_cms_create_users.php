@@ -23,6 +23,7 @@ class CmsCreateUsers extends AbstractMigration
              ->save();
 
         $this->insertYamlValues('cms_users');
+        $this->createDirectory(array('files/users'));
     }
 
     public function insertYamlValues($tableName)
@@ -41,6 +42,31 @@ class CmsCreateUsers extends AbstractMigration
 
             $this->execute("SET NAMES UTF8");
             $this->adapter->execute('insert into '.$tableName.' set '.$realValue);
+        }
+    }
+
+    public function createDirectory($dirs)
+    {
+        foreach($dirs as $dir)
+        {
+            $explodedDirs = explode('/', $dir);
+            $parentDir = $explodedDirs[0];
+
+            if(!is_dir('./public/'.$parentDir))
+            {
+                mkdir('./public/'.$parentDir);
+            }
+
+            if(!is_dir('./public/'.$dir))
+            {
+                mkdir('./public/'.$dir);
+            }
+
+            $files = glob('./public/'.$dir.'/*');
+            foreach($files as $file)
+            {
+                if(is_file($file)) unlink($file);
+            }
         }
     }
 

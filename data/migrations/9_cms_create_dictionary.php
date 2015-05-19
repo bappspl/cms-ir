@@ -2,20 +2,19 @@
 use Phinx\Migration\AbstractMigration;
 use Phinx\Db\Adapter\MysqlAdapter;
 
-class CmsCreatePage extends AbstractMigration
+class CmsCreateDictionary extends AbstractMigration
 {
 
     public function up()
     {
-        $this->table('cms_page', array())
+        $this->table('cms_dictionary', array())
              ->addColumn('name', 'string')
-             ->addColumn('slug', 'string')
-             ->addColumn('status_id', 'integer')
-             ->addColumn('content', 'string', array('null'=>true))
-             ->addForeignKey('status_id', 'cms_status', 'id', array('delete' => 'CASCADE', 'update' => 'NO_ACTION'))
+             ->addColumn('category', 'string')
+             ->addColumn('website_id', 'integer', array('null'=>true))
+             ->addColumn('filename', 'text', array('null'=>true))
              ->save();
 
-        $this->createDirectory(array('files/page', 'temp_files/page'));
+        $this->createDirectory(array('files/dictionary'));
     }
 
     public function createDirectory($dirs)
@@ -45,6 +44,6 @@ class CmsCreatePage extends AbstractMigration
 
     public function down()
     {
-        $this->dropTable('cms_page');
+        $this->dropTable('cms_dictionary');
     }
 }
