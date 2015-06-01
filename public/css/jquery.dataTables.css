@@ -21,7 +21,7 @@ table.dataTable tfoot th {
 }
 
 table.dataTable td {
-	padding: 3px 10px;
+	padding: 3px 18px !important;
 }
 
 table.dataTable td.center,
@@ -217,3 +217,33 @@ table.dataTable thead td:active {
 	-webkit-overflow-scrolling: touch;
 }
 
+div.dataTables_paginate {
+    text-align: center;
+    width: 33%;
+    float: left !important;
+}
+
+div.dataTables_info {
+    width: 33%;
+}
+
+div.dataTables_length select {
+    width: auto !important;
+}
+
+.dt-body-center {
+    width: 20px;
+    text-align: center;
+}
+.massive-action {
+    display: none;
+}
+.icheckbox_minimal-grey {
+    margin: 0 auto;
+}
+.selected-row td {
+    background-color:  #ecf0f1 !Important;
+}
+.dt-body-action {
+    width: 150px !important;
+}
